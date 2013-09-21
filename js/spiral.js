@@ -16,8 +16,7 @@ $(function () {
   // create a WebGL renderer, camera
   // and a scene
   var renderer = new THREE.WebGLRenderer();
-  var camera =
-    new THREE.PerspectiveCamera(
+  var camera = new THREE.PerspectiveCamera(
       VIEW_ANGLE,
       ASPECT,
       NEAR,
@@ -27,12 +26,12 @@ $(function () {
   scene.add(camera);
   camera.position.y = 300;
   camera.position.z = 300;
+  
   renderer.setSize(WIDTH, HEIGHT);
   $container.append(renderer.domElement);
 
   // create an ambient light
-  var light =
-    new THREE.AmbientLight(0x404040);
+  var light = new THREE.AmbientLight(0x404040);
 
   // set its position
   light.position.x = 0;
